@@ -1,26 +1,95 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.card-grid-content-list {
+  background: var(--Background-Default-Default, #ffffff);
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.text-content-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.heading {
+  color: var(--Text-Default-Default, #1e1e1e);
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28.8px;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.subheading {
+  color: var(--Text-Default-Secondary, #757575);
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.card {
+  display: flex;
+  background: var(--Background-Default-Default, #ffffff);
+  border: 1px solid var(--Border-Default-Default, #d9d9d9);
+  border-radius: 8px;
+  padding: 24px;
+  gap: 24px;
+}
+
+.image {
+  width: 160px;
+  height: 160px;
+  background: var(--Slate-200, #e3e3e3);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  color: var(--Text-Default-Default, #1e1e1e);
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28.8px;
+}
+
+.body-text {
+  color: var(--Text-Default-Secondary, #757575);
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+}
+
+.button-group {
+  display: flex;
+  gap: 16px;
+}
+
+.button {
+  background: var(--Background-Neutral-Tertiary, #e3e3e3);
+  border: 1px solid var(--Border-Neutral-Secondary, #767676);
+  border-radius: 8px;
+  padding: 12px;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--Text-Default-Default, #1e1e1e);
 }
